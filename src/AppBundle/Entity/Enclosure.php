@@ -87,6 +87,11 @@ class Enclosure
         return false;
     }
 
+    public function getSecurities(): Collection
+    {
+        return $this->securities;
+    }
+
     private function canAddDinosaur(Dinosaur $dinosaur): bool
     {
         return count($this->dinosaurs) === 0
