@@ -47,6 +47,22 @@ class Dinosaur
         $this->length = $length;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getGenus(): string
+    {
+        return $this->genus;
+    }
+
+    /**
+     * @param mixed $genus
+     */
+    public function setGenus($genus)
+    {
+        $this->genus = $genus;
+    }
+
     public function getSpecification(): string
     {
         return sprintf(
