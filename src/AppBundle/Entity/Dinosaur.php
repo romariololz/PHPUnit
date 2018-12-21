@@ -16,6 +16,22 @@ class Dinosaur
     private $length = 0;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $genus;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCarnivorous;
+
+    public function __construct(string $genus = 'Unknown', bool $isCarnivorous = false)
+    {
+        $this->genus = $genus;
+        $this->isCarnivorous = $isCarnivorous;
+    }
+
+    /**
      * @return mixed
      */
     public function getLength(): int
@@ -29,5 +45,15 @@ class Dinosaur
     public function setLength(int $length)
     {
         $this->length = $length;
+    }
+
+    public function getSpecification(): string
+    {
+        return sprintf(
+            'The %s %scarnivorous dinosaur is %d meters long',
+            $this->genus,
+            $this->isCarnivorous ? '' : 'non-',
+            $this->length
+        );
     }
 }
