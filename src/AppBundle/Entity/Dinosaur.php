@@ -95,4 +95,9 @@ class Dinosaur
             $this->length
         );
     }
+
+    public function setEnclosure(Enclosure $enclosure)
+    {
+        $this->enclosure = $enclosure;
+    }
 }
