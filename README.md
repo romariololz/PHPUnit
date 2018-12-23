@@ -81,3 +81,5 @@ us do what we love!
 <3 Your friends at KnpUniversity
 
 TDD concept
+
+Continuous Integration : circleCI
